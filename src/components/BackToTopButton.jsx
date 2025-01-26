@@ -34,7 +34,7 @@ const BackToTopButton = () => {
           exit={{ opacity: 0, scale: 0.8 }}
           whileHover={{ scale: 1.2 }}
         >
-          ⬆️
+          ☝️
         </motion.button>
       )}
     </>
