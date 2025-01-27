@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     {
       image: "/images/cashcalculator.jpeg",
       title: "Cash Calculator",
-      description: "An app to calculate cash transactions efficiently.",
+      description: "A simple Cash Calculator built using HTML, CSS, and JavaScript. This tool allows users to input the number of currency notes, calculate the total cash, and display the total in both numerical and text format.",
       liveLink: "https://muaz64.github.io/Cash-Counter/",
     },
     // {
@@ -18,25 +18,25 @@ const ProjectsSection = () => {
     {
       image: "/images/Counter App.jpeg",
       title: "Counter App",
-      description: "A simple counter application using React.",
+      description: "A simple counter application built using HTML, CSS, and JavaScript. It allows users to increment and decrement a number using buttons.",
       liveLink: "https://muaz64.github.io/Counter-app/",
     },
     {
       image: "/images/Curved Progress Bar.jpeg",
       title: "Curved Progress Bar",
-      description: "A dynamic curved progress bar visualization.",
+      description: "A dynamic curved progress bar built using HTML, CSS, and JavaScript. This component visually represents progress in a unique curved format with a customizable gradient design.",
       liveLink: "https://muaz64.github.io/Curved-Progress-Bar/",
     },
     {
       image: "/images/Dictionary app.jpeg",
       title: "Dictionary App",
-      description: "A dictionary app fetching word definitions via API.",
+      description: "A simple English Dictionary Web Application built using HTML, CSS, and JavaScript. This app fetches word definitions using the Free Dictionary API.",
       liveLink: "https://muaz64.github.io/Dictionary-app/",
     },
     {
       image: "/images/Extract Text app.jpeg",
       title: "Extract Text App",
-      description: "Extract and manipulate text with this app.",
+      description: "A web-based Text Extraction Application that extracts text content from an uploaded image. Built with HTML, CSS, and JavaScript, this app uses OCR (Optical Character Recognition) to fetch text dynamically.",
       liveLink: "https://muaz64.github.io/Extract-Text-app/",
     },
     // {
@@ -48,14 +48,14 @@ const ProjectsSection = () => {
     {
       image: "/images/Loan Calculator app.jpeg",
       title: "Loan Calculator App",
-      description: "Calculate and analyze loan details effortlessly.",
+      description: "A responsive Loan Calculator web application that computes monthly loan payments, total interest, and generates an amortization schedule. Built with HTML, CSS, and JavaScript.",
       liveLink: "https://muaz64.github.io/Loan-Calculator-app/",
     },
     {
       image: "/images/Mindful Breathing Timer app.jpeg",
       title: "Mindful Breathing Timer App",
-      description: "A mindfulness timer to guide breathing exercises.",
-      liveLink: "#",
+      description: "A simple and responsive breathing timer application designed to guide users through mindful breathing exercises. Built with HTML, CSS, and JavaScript, it helps reduce stress and promote relaxation.",
+      liveLink: "https://muaz64.github.io/Mindful-Breathing-Timer-app/",
     },
     // {
     //   image: "https://via.placeholder.com/400",
@@ -66,13 +66,13 @@ const ProjectsSection = () => {
     {
       image: "/images/Password Generator.jpeg",
       title: "Password Generator",
-      description: "Generate secure passwords instantly.",
+      description: "A simple and visually appealing password generator built using HTML, CSS, and JavaScript. This tool allows users to generate strong and secure passwords based on customizable criteria.",
       liveLink: "https://muaz64.github.io/Password-Generator/",
     },
     {
       image: "/images/Pollsystem.png",
       title: "Poll System",
-      description: "Create and manage polls for user feedback.",
+      description: "A dynamic poll system built using HTML, CSS, and JavaScript. This application allows users to vote on a specific topic and view real-time poll results.",
       liveLink: "https://muaz64.github.io/Pollsystem/",
     },
     // {
@@ -84,31 +84,31 @@ const ProjectsSection = () => {
     {
       image: "/images/Random Color Generator.jpeg",
       title: "Random Color Generator",
-      description: "Generate random colors for design inspiration.",
+      description: "A Random Color Generator application built using HTML, CSS, and JavaScript. This tool allows users to generate random colors and view their corresponding color codes in multiple formats.",
       liveLink: "https://muaz64.github.io/Random-Color-Generator/",
     },
     {
       image: "/images/dark-mode.jpeg",
       title: "Simple To-Do List",
-      description: "A minimal to-do list app to track tasks.",
+      description: "A responsive and user-friendly To-Do List application built with HTML, CSS, and JavaScript (jQuery). It allows users to add tasks, mark them as completed, and filter tasks based on their status (All, Active, Completed). The application also includes a Dark Mode toggle for better usability.",
       liveLink: "https://muaz64.github.io/Simple-To-Do-List/",
     },
     {
       image: "/images/StopwatchTimer.jpeg",
       title: "Stopwatch Timer",
-      description: "A stopwatch app for timing activities.",
+      description: "A sleek and functional Stopwatch Timer application built with HTML, CSS (Bootstrap), and JavaScript. This application allows users to track time, pause, reset, and record lap times efficiently.",
       liveLink: "https://muaz64.github.io/StopwatchTimer/",
     },
     {
       image: "/images/Student Records.jpeg",
       title: "Student Records",
-      description: "Manage student records with ease.",
+      description: "A dynamic web application for managing student records, created using HTML, CSS, and JavaScript.",
       liveLink: "https://muaz64.github.io/Student-Records/",
     },
     {
       image: "/images/Vowelchecker.jpeg",
       title: "Vowel Checker",
-      description: "An app to check and count vowels in text.",
+      description: "A sleek, neon-themed web application designed to count the number of vowels in a given text. Built with HTML, CSS, and JavaScript, this tool demonstrates modern web development techniques and thoughtful UI design.",
       liveLink: "https://muaz64.github.io/Vowelchecker/",
     },
   ];
@@ -116,18 +116,18 @@ const ProjectsSection = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+      className="min-h-screen bg-white flex flex-col items-center p-6">
       <h2 className="text-4xl font-bold text-blue-600 mb-6">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-400 rounded-lg shadow-md p-4 hover:shadow-lg transition-all"
+            className="bg-gray-200 rounded-lg shadow-md p-4 hover:shadow-xl transition-all"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-40 object-cover rounded-t-lg mb-4"
+              className="w-full h-50 object-cover rounded-t-lg mb-5"
             />
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
             <p className="text-black mb-4">{project.description}</p>
