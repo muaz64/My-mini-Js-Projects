@@ -15,14 +15,14 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-gray-900 flex flex-col items-center justify-center text-center px-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-gray-900 flex flex-col items-center justify-center text-center px-6 mb-5">
       <motion.h1
         className="text-5xl md:text-7xl font-bold text-white mb-6"
         initial="hidden"
         animate="visible"
         variants={textVariants}
       >
-        Welcome to My Portfolio
+        Welcome to My Mini Projects
       </motion.h1>
       <motion.p
         className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg"
