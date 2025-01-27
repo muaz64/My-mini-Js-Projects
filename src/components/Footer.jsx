@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
+    <footer className="bg-gradient-to-br from-blue-900 to-gray-900  text-white py-6">
       <div className="container mx-auto text-center">
         
         <div className="flex justify-center space-x-6 mb-4">
@@ -41,7 +41,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <p className="text-gray-200">
+        <p className="text-gray-50 font-semibold">
           &copy; {new Date().getFullYear()} Muaz Muhammad. All rights reserved.
         </p>
       </div>
