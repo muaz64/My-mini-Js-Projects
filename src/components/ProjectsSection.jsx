@@ -2,6 +2,18 @@
 const ProjectsSection = () => {
   const projects = [
     {
+      image: "/images/damuazcode.jpeg", 
+      title: "DaMuazCode - Online Code Editor",
+      description: "A lightweight, browser-based playground for web developers. Write HTML, CSS, and JavaScript in a tabbed environment and see results instantly in a live preview pane, complete with a built-in terminal console.",
+      liveLink: "https://muaz64.github.io/DaMuazCode--Online-Code-Editor/",
+    },
+    {
+      image: "/images/mcs.jpeg", 
+      title: "MCS: My Code Separator",
+      description: "A sleek, web-based utility designed for developers to quickly extract and decouple internal CSS and JavaScript from a single HTML file into separate, clean files.",
+      liveLink: "https://muaz64.github.io/MCS--Online-code-separator/",
+    },
+    {
       image: "/images/cashcalculator.jpeg",
       title: "Cash Calculator",
       description: "A simple Cash Calculator built using HTML, CSS, and JavaScript. This tool allows users to input the number of currency notes, calculate the total cash, and display the total in both numerical and text format.",
