@@ -1,4 +1,5 @@
-
+import { motion } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 const ProjectsSection = () => {
   const projects = [
     {
@@ -8,7 +9,7 @@ const ProjectsSection = () => {
       liveLink: "https://muaz64.github.io/DaMuazCode--Online-Code-Editor/",
     },
     {
-      image: "/images/mcs.jpeg", 
+      image: "/images/MCS.jpeg", 
       title: "MCS: My Code Separator",
       description: "A sleek, web-based utility designed for developers to quickly extract and decouple internal CSS and JavaScript from a single HTML file into separate, clean files.",
       liveLink: "https://muaz64.github.io/MCS--Online-code-separator/",
@@ -123,36 +124,83 @@ const ProjectsSection = () => {
     },
   ];
 
-  return (
-    <div
-      id="projects"
-      className="min-h-screen bg-white flex flex-col items-center p-6">
-      <h2 className="text-4xl font-bold text-blue-600 mb-6">My Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-gray-200 rounded-lg shadow-md p-4 hover:shadow-xl transition-all"
+return (
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-[#0d1117] transition-colors duration-500">
+      <div className="container mx-auto px-6">
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500 mb-4"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-50 object-cover rounded-t-lg mb-5"
-            />
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-black mb-4">{project.description}</p>
-            <a
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" font-semibold text-blue-900 hover:text-cyan-300"
+            My Creations
+          </motion.h2>
+          <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+            A curated collection of tools and applications built with precision and modern web standards.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="group relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300"
             >
-              Live Preview
-            </a>
-          </div>
-        ))}
+              {/* Image Container with Overlay */}
+              <div className="relative overflow-hidden aspect-video">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                   <span className="text-white text-sm font-medium">View Project Details →</span>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-6">
+                <div className="flex gap-2 mb-3">
+                  {project.tags?.map((tag, i) => (
+                    <span key={i} className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">
+                  {project.title}
+                </h3>
+                
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                  {project.description}
+                </p>
+
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-white transition-colors group/link"
+                >
+                  Live Preview 
+                  <FaExternalLinkAlt className="text-xs transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
